@@ -1,5 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+
 project(observable)
-cmake_minimum_required(VERSION 3.5)
 enable_testing()
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)

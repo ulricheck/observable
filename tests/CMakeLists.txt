@@ -23,6 +23,11 @@ if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
                                 COMPILE_FLAGS /bigobj)
 endif()
 
+if(${CMAKE_CXX_COMPILER_ID} STREQUAL AppleClang)
+    message(STATUS "disabling unused-but-set-variable warning for apple clang")
+    add_compile_options(-Wno-unused-but-set-variable)
+endif()
+
 configure_compiler(tests)
 target_link_libraries(tests observable catch)
 target_include_directories(tests PRIVATE src)
