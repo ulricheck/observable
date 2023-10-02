@@ -198,7 +198,7 @@ TEST_CASE("collection/concurrent mutations", "[collection]")
         collection<int> col;
 
         auto ts = std::vector<std::thread> { };
-        auto ref_sum = 0;
+        //auto ref_sum = 0;
         std::atomic<bool> wait { true };
 
         for(auto i = 1; i <= 8; ++i)
