@@ -77,7 +77,7 @@ using val_type_t = typename val_type<T>::type;
 template <typename Op, typename ... Args>
 struct result_node
 {
-#if defined(__cpp_lib_invoke) && __cpp_lib_invoke && defined(_HAS_CXX17) && _HAS_CXX17
+#if defined(__cpp_lib_invoke) && __cpp_lib_invoke /* && defined(_HAS_CXX17) && _HAS_CXX17*/
     using type = expression_node<
                     std::decay_t<
                         std::invoke_result_t<
