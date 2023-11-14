@@ -1,3 +1,7 @@
+
+// for MSVC VS22
+#pragma warning(disable: 5219)
+
 #include <functional>
 #include <catch/catch.hpp>
 #include <observable/value.hpp>
